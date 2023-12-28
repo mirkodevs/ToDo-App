@@ -1,13 +1,16 @@
 const express = require('express');
-const { engine } = require ('express-handlebars');
+const { dirname, join } = require('path');
+const { engine } = require('express-handlebars');
+const DatabaseManager = require('./Backend/database')
 
 const app = express();
 const port = 3000;
 
+const db = new DatabaseManager( app )
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set("views", "./Frontend/views");
+app.set("views", join(__dirname, "Frontend", "views"));
 
 app.use(express.static('public'))
 app.get('/', (req, res) => {
