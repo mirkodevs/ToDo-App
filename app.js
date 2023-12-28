@@ -12,7 +12,7 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set("views", join(__dirname, "Frontend", "views"));
 
-app.use(express.static('public'))
+app.use( express.static(join(__dirname, "Frontend", "public")) );
 app.get('/', (req, res) => {
     res.render('main', {layout : 'index'});
 });
