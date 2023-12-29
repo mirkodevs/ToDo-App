@@ -14,12 +14,12 @@ class DatabaseManager{
         return new sqlite3.Database( dbPath, err => {
 
             if (err) {
-              console.error(err.message)
-              throw err
-            } else {
-                this.setGETRequests( this.app )
-                console.log('Connected to the SQLite database.')  
+              return console.log(err.message)
             }
+
+            this.setGETRequests( this.app )
+            console.log('Connected to the SQLite database.')  
+            
             
         })
     }
@@ -28,12 +28,11 @@ class DatabaseManager{
 
         app.get( "/api/tasks", (req, res, next) => {
 
-            let sql = 'select * from tasks'
-            this.db.all( sql, [], (err, rows) => {
+            let query = 'SELECT * FROM tasks'
+            this.db.all( query, [], (err, rows) => {
 
                 if (err) {
-                  res.status(400).json({ "error": err.message });
-                  return;
+                  return res.status(400).json({ "error": err.message });
                 }
 
                 res.json({
@@ -43,7 +42,25 @@ class DatabaseManager{
 
               });
 
-        })
+        });
+
+        app.get('/api/tasks/today', (req,res) => {
+
+            let query = `SELECT * FROM tasks WHERE date(due) = date('now');`;
+
+            this.db.all(query, [], (err, rows) => {
+                if(err) 
+                {
+                    return res.status(400).json({"error":err.message});
+                }
+
+                res.json({
+                    "message": "success",
+                    "data": rows
+                });
+            })
+            
+        });
     
     }
 

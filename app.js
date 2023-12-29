@@ -1,5 +1,5 @@
 const express = require('express');
-const { dirname, join } = require('path');
+const path = require('path');
 const { engine } = require('express-handlebars');
 const DatabaseManager = require('./Backend/database')
 const axios = require('axios')
@@ -11,9 +11,9 @@ const db = new DatabaseManager( app )
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set("views", join(__dirname, "Frontend", "views"));
+app.set("views", path.join(__dirname, "Frontend", "views"));
 
-app.use( express.static(join(__dirname, "Frontend", "public")) );
+app.use( express.static(path.join(__dirname, "Frontend", "public")) );
 app.get('/', async (req, res) => {
 
     const { data } = await axios.get(`http://127.0.0.1:${port}/api/tasks`)
