@@ -40,11 +40,13 @@ class DatabaseManager{
                     "message": "success",
                     "data": rows
                 })
+
               });
 
         })
     
     }
+
 
 
 
