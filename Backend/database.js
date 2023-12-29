@@ -8,8 +8,6 @@ class DatabaseManager{
         this.app = app
         this.db = this.connectDB( join(__dirname, '..', 'db.sqlite' ))
 
-        
-
     }
 
     connectDB( dbPath ) {
@@ -42,11 +40,13 @@ class DatabaseManager{
                     "message": "success",
                     "data": rows
                 })
+
               });
 
         })
     
     }
+
 
 
 
