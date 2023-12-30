@@ -14,6 +14,9 @@ app.set('view engine', 'handlebars');
 app.set("views", path.join(__dirname, "Frontend", "views"));
 
 app.use( express.static(path.join(__dirname, "Frontend", "public")) );
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', async (req, res) => {
 
     const { data } = await axios.get(`http://127.0.0.1:${port}/api/tasks`)

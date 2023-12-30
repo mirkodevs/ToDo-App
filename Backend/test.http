@@ -1,0 +1,29 @@
+# This section for test the api with REST Client Extension for VSCode
+
+POST http://localhost:3000/api/tasks/new HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Learn HTTP files",
+  "description": "-",
+  "tags": ["Coding", "Learning"],
+  "priority": 2,
+  "due": "2024-01-01",
+  "created": "2023-12-30",
+  "recur_interval": 0
+}
+
+###
+
+POST http://localhost:3000/api/tasks/new HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Learn HTTP files",
+  "description": "-",
+  "tags": ["Coding", "Learning"],
+  "priority": 2,
+  "due": "2024-01-01",
+  "created": "2023-12-30"
+}
+
