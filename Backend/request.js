@@ -13,6 +13,7 @@ class dbRequestManager{
             due: today,
             created: today,
             recur_interval: 0,
+
          }
          this.taskParams = Object.keys(this.taskDefaults)
 

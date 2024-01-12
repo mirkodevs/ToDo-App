@@ -18,9 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
-
     const { data } = await axios.get(`http://127.0.0.1:${port}/api/tasks`)
-
     res.render('main', {
         layout : 'index',
         tasks: data.data

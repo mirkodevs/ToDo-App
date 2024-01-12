@@ -5,22 +5,29 @@
     font-family: 'Roboto Slab', serif;
     font-family: 'Onest', sans-serif;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
 }
+.strike {text-decoration: line-through;}
+
 .flex {
     display: flex;
 }
+
 .text-center {
     text-align: center;
 }
+
 .bold {
     font-weight: 700;
 }
+
 .container {
     display: flex;
     align-items: center;
@@ -28,28 +35,33 @@ body {
     width: 100%;
     margin: auto;
 }
+
 @media screen and (min-width:768px) {
     .container {
 
         max-width: 768px;
     }
 }
+
 button {
     cursor: pointer;
     background-color: transparent;
 
 }
+
 #top-header {
     display: flex;
     justify-content: center;
     font-family: 'Onest', sans-serif;
 }
+
 #top-header ul {
     display: flex;
     align-items: center;
     gap: 1em;
 
 }
+
 #top-header ul li button {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 6px;
@@ -57,13 +69,24 @@ button {
     border: none;
     color: var(--color1);
 }
+
 li {
+
     list-style-type: none;
+
 }
+
 #main-footer {
     background-color: var(--color1);
     margin: 0;
     margin-top: 25px;
     padding: 10px 0;
     color: white;
+}
+
+.oneTask {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2px 8px;
+    margin: 20px 0;
+    border-radius: 12px;
 }

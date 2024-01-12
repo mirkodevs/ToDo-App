@@ -1,8 +1,9 @@
 
 <!-- API: /api/tasks -->
 <body>
-    
+    <ul id = "tasks">
     {{#each tasks}}
-        <p class="text-center">{{this.name}}. Due: {{this.due}}</p>
+        <li class = "oneTask"><p class="text-center">{{this.name}}. Due: {{this.due}}</p></li>
     {{/each}}
+    </ul>
 </body>
