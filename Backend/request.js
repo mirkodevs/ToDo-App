@@ -11,6 +11,7 @@ class dbRequestManager{
             tags: '-',
             priority: 0,
             due: today,
+            state:"pending",
             created: today,
             recur_interval: 0,
 
