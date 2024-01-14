@@ -13,3 +13,14 @@ console.log("clicked")
   })
 })
 })
+const addButton = document.getElementById("addTask");
+const closeDialog = document.getElementById("close-dialog")
+const newTask = document.getElementById("newTask")
+addButton.addEventListener("click",()=> {
+newTask.showModal()
+})
+closeDialog.addEventListener("click",()=> {
+newTask.close()
+})
+
+

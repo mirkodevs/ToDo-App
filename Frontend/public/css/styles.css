@@ -2,6 +2,7 @@
     --color1: #3468C0;
     --color2: #FBF9F1;
     --color3: #525CEB;
+    --color4: #B4B4B3;
     font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Slab', serif;
@@ -45,6 +46,9 @@ body {
     margin: auto;
 }
 
+.none {
+    display: none;
+}
 
 
 button {
@@ -169,4 +173,42 @@ footer {
     color: var(--color2);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: 2px solid var(--color2);
+}
+
+#newTask {
+
+    position: fixed;
+}
+
+::backdrop {
+
+    opacity: 0.75;
+    background-image: var(--color4);
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+#newTask fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.create-task-btn{
+width: 100%;
+background-color: var(--color1);
+border-radius: 6px;
+color: var(--color2);
+padding: 5px 0;
+margin: 10px 0;
+
+}
+#close-dialog{
+    position: absolute;
+    right:0.7em;
+    top:0.7em;
+    padding: 0;
+    border: none;
+    color: var(--color1);
 }

@@ -92,8 +92,7 @@
             <div style="background-color: #7360DF">
                 <div>
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 1025 1024">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1025 1024">
                             <path fill="currentColor"
                                 d="M896.428 1024h-768q-53 0-90.5-37.5T.428 896V128q0-53 37.5-90.5t90.5-37.5h768q53 0 90.5 37.5t37.5 90.5v768q0 53-37.5 90.5t-90.5 37.5m-576-288q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v128q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5zm256-256q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v384q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5zm256-320q0-13-9.5-22.5t-22.5-9.5h-64q-13 0-22.5 9.5t-9.5 22.5v704q0 13 9.5 22.5t22.5 9.5h64q13 0 22.5-9.5t9.5-22.5z" />
                         </svg>
@@ -106,26 +105,46 @@
             </div>
         </section>
         <section>
-        <section class="container" id = "tasks">
-            <div style="width: 100%;display:flex;justify-content:space-between">
-            <h2 style="display:inline">Tasks</h2>
-            <h3  style="display:inline;line-height:30px;color:#52D3D8">
-                <button class="button bold" style="color: currentColor;">view All</button>
-                
-                
-                </h3>
-            </div>
-            {{{ body }}}
-        </section>
-        
+            <section class="container">
+                <div style="width: 100%;display:flex;justify-content:space-between">
+                    <h2 style="display:inline">Tasks</h2>
+                    <h3 style="display:inline;line-height:30px;color:#52D3D8">
+                        <button class="button bold" style="color: currentColor;">view All</button>
+
+
+                    </h3>
+                </div>
+                {{{ body }}}
+            </section>
+
         </section>
     </main>
     <footer id="main-footer">
-        <button id = "addTask">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M228 128a12 12 0 0 1-12 12h-76v76a12 12 0 0 1-24 0v-76H40a12 12 0 0 1 0-24h76V40a12 12 0 0 1 24 0v76h76a12 12 0 0 1 12 12"/></svg>
+        <button id="addTask">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+                <path fill="currentColor"
+                    d="M228 128a12 12 0 0 1-12 12h-76v76a12 12 0 0 1-24 0v-76H40a12 12 0 0 1 0-24h76V40a12 12 0 0 1 24 0v76h76a12 12 0 0 1 12 12" />
+            </svg>
         </button>
         <p class="text-center">&#169; Copyright CodeImproving</p>
     </footer>
+
+    <dialog id="newTask">
+        <form method="dialog">
+            <h2 class="text-center">add Task</h2>
+            <fieldset>
+                <label>name:</label><br>
+                <input type="text" class="text">
+            </fieldset>
+            <button class="button create-task-btn text-center">Create Task</button>
+        </form>
+        <button id="close-dialog">
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+
+        </button>
+    </dialog>
+
+
     <script src="/js/home.js"></script>
 
 </body>
